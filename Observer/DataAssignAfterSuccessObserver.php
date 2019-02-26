@@ -105,8 +105,6 @@ class DataAssignAfterSuccessObserver implements ObserverInterface
             $source = $this->sourceFactory->create();
             $source->setData('source_id', $payment->getAdditionalInformation('stripeToken'));
             $source->setData('reference_order_id', $order->getId());
-            $order->setState(Order::STATE_PENDING_PAYMENT);
-            $order->setStatus(Order::STATE_PENDING_PAYMENT);
             $payment->setAmountAuthorized(0);
             $comments = $order->getAllStatusHistory();
 
