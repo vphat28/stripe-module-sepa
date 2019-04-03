@@ -38,12 +38,7 @@
         <input type="checkbox"
                data-bind="checked: sepaagreement,click: useSepa,attr: {for: getCode() + 'sepaagreement'},,style: { float: 'left'}"/>
 
-        <div class="checkout-agreements-block">
 
-            <!-- ko foreach: $parent.getRegion('before-place-order') -->
-            <!-- ko template: getTemplate() --><!-- /ko -->
-            <!--/ko-->
-        </div>
         <div class="stripe-consent">
             <b><p data-bind="html: getInstructions()"></p></b>
 
